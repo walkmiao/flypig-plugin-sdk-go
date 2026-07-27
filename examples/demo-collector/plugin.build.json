@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "metadata": {
+    "code": "demo-collector",
+    "name": "Demo Collector",
+    "vendor": "FlyPig",
+    "description": "Minimal Plugin API v1 collector for SDK and contract testing"
+  },
+  "language": "go",
+  "entrypoint": "bin/demo-collector",
+  "go": {
+    "package": ".",
+    "ldflagsPackage": "github.com/walkmiao/flypig-demo-collector/buildinfo"
+  },
+  "compatibility": {
+    "pluginApi": ">=1.1.0 <2.0.0",
+    "dataPlane": ">=0.8.0"
+  },
+  "connectionSemantics": [
+    "requestResponse"
+  ],
+  "schemas": {
+    "config": {
+      "version": 1,
+      "source": "schemas/config.schema.json",
+      "path": "schemas/config.schema.json"
+    },
+    "point": {
+      "version": 1,
+      "source": "schemas/point.schema.json",
+      "path": "schemas/point.schema.json"
+    },
+    "event": {
+      "version": 1,
+      "source": "schemas/event.schema.json",
+      "path": "schemas/event.schema.json"
+    }
+  },
+  "capabilities": [
+    "health",
+    "status",
+    "taskManagement",
+    "telemetry",
+    "deviceDiscovery",
+    "pointDiscovery"
+  ],
+  "permissions": {
+    "network": {
+      "outbound": false,
+      "inbound": false,
+      "allowedDestinations": []
+    },
+    "filesystem": {
+      "read": [
+        "package"
+      ],
+      "write": [
+        "runtime/logs"
+      ]
+    },
+    "environment": {
+      "allow": [
+        "TZ",
+        "LANG"
+      ]
+    },
+    "secrets": {
+      "allow": []
+    }
+  },
+  "conformance": {
+    "config": "testdata/conformance-config.json"
+  }
+}

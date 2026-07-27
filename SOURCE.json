@@ -1,0 +1,12 @@
+{
+  "module": "github.com/walkmiao/flypig-plugin-sdk-go",
+  "pluginApi": {
+    "apiVersion": "flypig.io/plugin/v1",
+    "contractLockSha256": "6020f1c1add861fc0a107d671bcdc4c37a1b717558b6d18060e9cbfa2d9bd8f3",
+    "contractVersion": "1.1.0"
+  },
+  "schemaVersion": 1,
+  "sdkVersion": "1.3.2",
+  "sourceRef": "working-tree",
+  "sourceRepository": "flypig"
+}

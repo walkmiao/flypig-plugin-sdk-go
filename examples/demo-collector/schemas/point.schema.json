@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://flypig.io/plugins/demo-collector/point/v1.schema.json",
+  "title": "Demo collector point definition",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "index": {
+      "type": "integer",
+      "minimum": 1
+    }
+  }
+}
